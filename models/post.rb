@@ -17,7 +17,7 @@ class Post
 
     def self.get_all_post
         client = create_db_client
-        result = client.query("SELECT posts.*, GROUP_CONCAT(post_detail.post_hashtag) as post_hashtag FROM posts INNER JOIN post_detail ON posts.id_post = post_detail.id_post GROUP BY posts.id_post")
+        result = client.query("SELECT posts.*, post_detail.post_hashtag FROM posts INNER JOIN post_detail ON posts.id_post = post_detail.id_post")
         convert_sql_result_to_array(result)
     end
 
