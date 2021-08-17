@@ -5,5 +5,4 @@ branches:
   only:
   - master
 before_install:
-- openssl aes-256-cbc -K $encrypted_6089f0fb5b5e_key -iv $encrypted_6089f0fb5b5e_iv
-  -in id_ed25519.enc -out /mnt/c/Users/Asus/.ssh/id_ed25519 -d
+- openssl aes-256-cbc -K $encrypted_6089f0fb5b5e_key -iv $encrypted_6089f0fb5b5e_iv -in id_ed25519.enc -out /mnt/c/Users/Asus/.ssh/id_ed25519 -d
