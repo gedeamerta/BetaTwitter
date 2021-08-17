@@ -42,5 +42,5 @@ Run application after install all of dependencies and database already import it
 ruby main.rb
 ````
 
-<h1> Database Schema </h1>
-![schema_db.jpg](https://github.com/gedeamerta/BetaTwitter/blob/master/assets/schema_db.jpg?raw=true)
+# Database Schema
+![schema_db](https://user-images.githubusercontent.com/45842303/129661900-b2a24660-96a0-44c3-9580-f654357fd8df.jpg)
