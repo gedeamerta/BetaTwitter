@@ -1,0 +1,22 @@
+<a href="/post/new">Create new Post</a>
+<div style="float: right">
+    <h1>Trending Topics</h1>
+    <% post_tags.each do |tag| %>
+        <a href="/post/<%= tag.post_hashtag.match(/[^#]\S+/) %>"><%= tag.post_hashtag %></a>
+    <% end %>
+</div>
+
+<h1>Post</h1>
+<% posts.each do |post|%>
+<h3>Username</h3>
+    <p><%= post.created_at %></p>
+
+    <h4><%= post.caption %></h4>
+    <p><%= post.image %></p>
+    <a href="/post/<%= post.post_hashtag %>">#<%= post.post_hashtag %></a>
+
+    <br><br>
+
+    <a href="/post/comment/<%= post.id_post %>"> Add comment </a> <br>
+    <a href="/post/add_hashtag/<%= post.id_post %>"> Add hashtag </a>
+<% end %>

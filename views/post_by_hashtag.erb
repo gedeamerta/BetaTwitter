@@ -1,0 +1,11 @@
+<h3>Username</h3>
+<% posts.each do |post| %>
+    <p><%= post.created_at %></p>
+
+    <h4><%= post.caption %></h4>
+    <p><%= post.image %></p>
+    <a href="/post/<%= post.post_hashtag %>"><%= post.post_hashtag %></a>
+
+    <br><br>
+    <a href="/post/comment/<%= post.id_post %>"> Add comment </a>
+<% end %>

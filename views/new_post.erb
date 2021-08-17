@@ -1,0 +1,22 @@
+<h1>New Post</h1>
+<form action="/post/create" method="post">
+
+    <input type="hidden" value="1" name="id_user">
+
+    <label>Caption</label><br>
+    <textarea name="caption" type="text" placeholder="Max 1000 character"></textarea>
+
+    <br><br>
+
+    <label>Image</label><br>
+    <input name="image" type="file">
+
+    <br><br>
+
+    <label>Hashtag</label><br>
+    <input name="hashtag_text" type="text" id="input_hashtag">
+
+    <br><br>
+    
+    <button type="submit">Submit</button>
+</form>

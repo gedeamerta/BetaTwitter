@@ -1,0 +1,20 @@
+<% posts.each do |post|%>
+    <h3>Username</h3>
+    <p><%= post.created_at %></p>
+
+    <h4><%= post.caption %></h4>
+    <p>#<%= post.post_hashtag %></p>
+    <p><%= post.image %></p>
+
+    <form action="/comment/create" method="post">
+
+        <label>Add new comment</label><br>
+        <textarea name="comment" type="text" placeholder="Max 1000 character"></textarea><br>
+
+        <label>Hashtag</label><br>
+        <input name="comment_hashtag" type="text" id="input_hashtag"><br>
+
+        <input type="hidden" name="id_user" value="1">
+        <button type="submit">Submit</button>
+    </form>
+<% end %>

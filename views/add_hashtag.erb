@@ -1,0 +1,18 @@
+<% posts.each do |post|%>
+    <h3>Username</h3>
+    <p><%= post.created_at %></p>
+
+    <h4><%= post.caption %></h4>
+    <p><%= post.post_hashtag %></p>
+    <p><%= post.image %></p>
+
+    <form action="/post/create_hashtag" method="post">
+        <input type="hidden" name="id_post" value="<%= post.id_post %>">
+
+        <label>Hashtag</label><br>
+        <input name="hashtag_text" type="text" id="input_hashtag"><br>
+
+        <input type="hidden" name="id_user" value="1">
+        <button type="submit">Submit</button>
+    </form>
+<% end %>
