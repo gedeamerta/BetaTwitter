@@ -43,9 +43,4 @@ ruby main.rb
 ````
 
 <h1> Database Schema </h1>
-![image](https://user-images.githubusercontent.com/45842303/129660019-f9691dcf-d092-4e85-b8e2-c7ffd6fb16f3.png)
-
-
-
-
-
+![schema_db](https://user-images.githubusercontent.com/45842303/129661013-b6c2bc7e-cba6-44a5-830d-2782761951ce.jpg)
