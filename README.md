@@ -2,7 +2,7 @@
 <p> Welcome to Generasi Gigih Social Media Platform for Final Project </p>
 
 ## Problem Description
-This app was created for social media development. It can be used by all developers who want to improve their algorithm about Social Media platform. So created this app is personally for developers only. 
+This app was created for social media development. It can be used by all developers who want to improve their algorithm about Social Media platform. So it's created personally for developers only. 
 
 ## Build With
 - Ruby
