@@ -22,6 +22,12 @@ class User
         true
     end
 
+    def self.get_users 
+        client = create_db_client
+        result = client.query("SELECT * FROM users")
+        convert_sql_result_to_array(result)
+    end
+
     def self.convert_sql_result_to_array(params)
         users = Array.new
         params.each do |data|
