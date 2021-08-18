@@ -7,3 +7,9 @@ branches:
 before_install:
 - openssl aes-256-cbc -K $encrypted_6089f0fb5b5e_key -iv $encrypted_6089f0fb5b5e_iv -in id_ed25519.enc -out ~/.ssh/id_ed25519 -d
 - chmod 400 ~/.ssh/id_ed25519
+install:
+  - pip install ansible
+jobs:
+  include:
+  - stage: deploy-staging
+    script: ansible-playbook -i ansible/inventory.staging.yml ansible/playbook.yml --user $ANSIBLE_USER --private-key ~/.ssh/id_ed25519
