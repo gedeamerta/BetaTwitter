@@ -1,6 +1,9 @@
 <h1>Final Project Generasi Gigih (Beta Twitter)</h1>
 <p> Welcome to Generasi Gigih Social Media Platform for Final Project </p>
 
+## Problem Description
+This app was created for social media development. It can be used by all developers who want to improve their algorithm about Social Media platform. So it's created personally for developers only. 
+
 ## Build With
 - Ruby
 - Sinatra
