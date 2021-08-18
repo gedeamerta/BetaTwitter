@@ -1,4 +1,4 @@
-require_relative '../test/test_helper.rb'
+require_relative '../test_helper.rb'
 require 'mysql2'
 require_relative '../../models/comment.rb'
 
