@@ -41,12 +41,12 @@ mysql -u [username] -p newdatabase < beta_twitter.sql
 
 Changes your database connection 
 ````
-    connect = Mysql2::Client.new(
-        :host => "your_host",
-        :username => "your_username",
-        :password => "your_password",
-        :database => "beta_twitter"
-    )
+connect = Mysql2::Client.new(
+    :host => "your_host",
+    :username => "your_username",
+    :password => "your_password",
+    :database => "beta_twitter"
+)
 ````
 
 ## Run App
