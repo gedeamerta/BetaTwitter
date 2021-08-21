@@ -62,7 +62,7 @@ class PostController
         post_id = params['id_post']
         hashtag_text = params['hashtag_text']
         post.save_hashtag(hashtag_text)
-        post.save_to_postdetail(post_id, hashtag_text)
+        post.save_to_post_detail(post_id, hashtag_text)
     end
 
     # * Json

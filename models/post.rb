@@ -23,16 +23,11 @@ class Post
 
     def self.get_posts_by_id(id_post)
         client = create_db_client
-        result = client.query("SELECT posts.*, post_detail.post_hashtag FROM posts INNER JOIN post_detail ON posts.id_post = post_detail.id_post WHERE posts.id_post = #{id_post}")
+        result = client.query("SELECT posts.*, GROUP_CONCAT(post_detail.post_hashtag) as post_hashtag FROM posts INNER JOIN post_detail ON posts.id_post = post_detail.id_post WHERE posts.id_post = #{id_post} GROUP BY posts.id_post")
         convert_sql_result_to_array(result)
     end
 
     def self.get_post_by_hastag(hashtag_text)
-        posts = find_post_hashtag(hashtag_text)
-        posts
-    end
-
-    def self.find_post_hashtag(hashtag_text)
         client = create_db_client
         result = client.query("SELECT posts.*, post_detail.post_hashtag FROM posts INNER JOIN post_detail ON posts.id_post = post_detail.id_post WHERE post_detail.post_hashtag = '#{hashtag_text}'")
         convert_sql_result_to_array(result)
