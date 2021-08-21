@@ -6,6 +6,10 @@ describe UserController do
     
     describe '#save_user' do
         context 'when user want to save data' do
+            before(:each) do
+                client = create_db_client
+                client.query("TRUNCATE users")
+            end
             it 'should be saved' do
                 params = {
                     'username' => 'gdamerta',
