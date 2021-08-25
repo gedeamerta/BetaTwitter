@@ -31,14 +31,7 @@ Rspec
 gem install rspec
 ````
 
-## Import Database
-Create your database and then import the database.
-````
-CREATE DATABASE newdatabase;
-
-mysql -u [username] -p newdatabase < beta_twitter.sql
-````
-
+## Setting Database
 Changes your database connection 
 ````
 connect = Mysql2::Client.new(
