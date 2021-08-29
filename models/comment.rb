@@ -33,9 +33,9 @@ class Comment
         client.query("INSERT INTO comments (comment, id_user) VALUES ('#{@comment}', #{@id_user})")
     end
 
-    def save_comment_to_postdetail(comment_id, comment_hashtag)
+    def save_comment_to_postdetail(comment_id, post_hashtag, comment_hashtag)
         client = create_db_client
-        client.query("INSERT INTO post_detail (id_comment, comment_hashtag) VALUES (#{comment_id}, '#{comment_hashtag.match(/[^#]\S+/)}')")
+        client.query("INSERT INTO post_detail (id_comment, post_hashtag, comment_hashtag) VALUES (#{comment_id}, '#{post_hashtag.match(/[^#]\S+/)}', '#{comment_hashtag.match(/[^#]\S+/)}')")
     end
 
     def save_hashtag(hashtag)

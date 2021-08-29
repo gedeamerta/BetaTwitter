@@ -2,7 +2,7 @@
 <div style="float: right">
     <h1>Trending Topics</h1>
     <% post_tags.each do |tag| %>
-        <a href="/post/<%= tag.post_hashtag %>">#<%= tag.post_hashtag %></a>
+        <a href="/post/<%= tag.post_hashtag %>"><%= tag.post_hashtag  %></a>
     <% end %>
 </div>
 
@@ -18,5 +18,5 @@
     <br><br>
 
     <a href="/post/comment/<%= post.id_post %>"> Add comment </a> <br>
-    <a href="/post/add_hashtag/<%= post.id_post %>"> Add hashtag </a>
+
 <% end %>
