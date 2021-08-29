@@ -15,7 +15,7 @@ class Post_Detail
 
     def self.get_all_tag_trending
         client = create_db_client
-        result = client.query("SELECT post_hashtag, comment_hashtag, COUNT(post_hashtag) OR COUNT(comment_hashtag) as total FROM post_detail WHERE post_detail.created_at > DATE_SUB(CURDATE(), INTERVAL 1 DAY) GROUP BY post_hashtag, comment_hashtag LIMIT 5")
+        result = client.query("SELECT DISTINCT IF(comment_hashtag IS NULL OR post_hashtag = comment_hashtag, post_hashtag, '') as post_hashtag FROM post_detail WHERE post_detail.created_at > DATE_SUB(CURDATE(), INTERVAL 1 DAY) GROUP BY post_hashtag, comment_hashtag LIMIT 6")
         convert_sql_result_to_array(result)
     end 
 

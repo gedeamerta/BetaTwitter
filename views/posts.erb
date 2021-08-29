@@ -2,7 +2,11 @@
 <div style="float: right">
     <h1>Trending Topics</h1>
     <% post_tags.each do |tag| %>
-        <a href="/post/<%= tag.post_hashtag %>">#<%= tag.post_hashtag == tag.comment_hashtag ? tag.post_hashtag : tag.post_hashtag && tag.comment_hashtag  %></a>
+        <a href="/post/<%= tag.post_hashtag %>">
+            <% if tag.post_hashtag != ''%>
+                #<%= tag.post_hashtag  %>
+            <%end%>
+        </a>
     <% end %>
 </div>
 
